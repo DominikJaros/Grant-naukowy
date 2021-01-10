@@ -5,10 +5,15 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.Layout;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 
 public class dashboard extends AppCompatActivity {
     View btDiagnostyka, btChoroby;
+    Animation fadeIn;
+    View relativeLayout;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -16,6 +21,12 @@ public class dashboard extends AppCompatActivity {
 
         btChoroby = findViewById(R.id.btChoroby);
         btDiagnostyka = findViewById(R.id.btDiagnostyka);
+        relativeLayout = findViewById(R.id.relativeLayout);
+
+        fadeIn = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.fade_in);
+
+        Animation();
+
 
         btDiagnostyka.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -24,5 +35,9 @@ public class dashboard extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+    }
+
+    private void Animation() {
+        relativeLayout.startAnimation(fadeIn);
     }
 }

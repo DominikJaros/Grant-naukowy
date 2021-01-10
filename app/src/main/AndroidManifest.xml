@@ -9,7 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.ICZMP">
-        <activity android:name=".miazdzyca"></activity>
+        <activity android:name=".diag_postive"></activity>
+        <activity android:name=".miazdzyca_leczenie" />
+        <activity android:name=".miazdzyca" />
         <activity android:name=".chr_kardiologiczne" />
         <activity android:name=".diagnostyka" />
         <activity android:name=".dashboard" />

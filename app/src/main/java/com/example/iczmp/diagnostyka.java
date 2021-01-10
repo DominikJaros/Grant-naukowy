@@ -1,14 +1,17 @@
 package com.example.iczmp;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class diagnostyka extends AppCompatActivity {
 
-    View btKardiologiczne;
+    View btKardiologiczne, RelativeLayout;
+    Animation fadeIn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -16,6 +19,13 @@ public class diagnostyka extends AppCompatActivity {
         setContentView(R.layout.activity_diagnostyka);
 
         btKardiologiczne = findViewById(R.id.btKardiologiczne);
+        RelativeLayout = findViewById(R.id.RelativeLayout);
+        fadeIn = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.fade_in);
+
+        animation();
+
+
+
         btKardiologiczne.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -23,5 +33,9 @@ public class diagnostyka extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+    }
+
+    private void animation() {
+        RelativeLayout.startAnimation(fadeIn);
     }
 }

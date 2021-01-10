@@ -3,4 +3,16 @@
     <string name="logo_iczmp">Logo Iczmp</string>
     <string name="appName">Instytut Centrum Zdrowia Matki Polki</string>
     <string name="zaczynajmy">Zaczynajmy!</string>
+    <string name="Przyczyna">Przyczyną miażdżycy jest postępujący proces zaburzenia pracy naczyń, które doprowadzają krew. W żyłach i tętnicach tworzą się blaszki miażdżycowe.\n W diagnostyce wykorzystywane są badania:</string>
+    <string name="miazdzyca_diagnoza">
+        <li>morfologia krwi,</li>\n
+        <li>lipidogram (cholesterol i trójglicerydy),</li>\n
+        <li>stężenie kreatyniny,</li>\n
+        <li>tężenie mocznika, CRP,</li>\n
+        <li>rezonans magnetyczny tętnic,</li>\n
+        <li>tomografia komputerowa tętnic,</li>\n
+        <li>badanie ultrasonograficzne z oceną dopplerowską przepływów krwi w tętnicach.</li>\n
+    </string>
+    <string name="miadzycaLeczenie">Często stosowanym zabiegiem jest angioplastyka. Polega na poszerzeniu naczyń krwionośnych, które zostały zwężone lub zamknięte w wyniku miażdżycy. Jest mało inwazyjną formą leczenia. W trakcie zabiegu wprowadza się stent poprzez tętnicę kończyny dolnej lub górnej, który na stałe zostaję w tętnicy wieńcowej, Innym sposobem jest leczenie chirurgiczne. Jeśli u chorego z różnych powodów nie można zastosować angioplastyki to wtedy stosuje się by-pasy.</string>
+
 </resources>
