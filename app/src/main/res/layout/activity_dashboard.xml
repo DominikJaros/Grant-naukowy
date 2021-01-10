@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context=".dashboard">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="73dp">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:background="@drawable/gradient_blue" />
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="72dp"
+            android:layout_height="65dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_centerInParent="true"
+            android:layout_marginStart="158dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="158dp"
+            android:layout_marginBottom="5dp"
+            app:srcCompat="@drawable/logo_iczmp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <View
+            android:id="@+id/btChoroby"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="0dp"
+            android:layout_marginBottom="0dp"
+            android:background="@drawable/dashboard_style"
+            android:elevation="50dp" />
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="58dp"
+            android:layout_height="58dp"
+            android:layout_alignStart="@+id/btChoroby"
+            android:layout_alignTop="@+id/btChoroby"
+            android:layout_alignEnd="@+id/btChoroby"
+            android:layout_marginStart="33dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginEnd="33dp"
+            android:elevation="51dp"
+            app:srcCompat="@drawable/ic_search" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imageView3"
+            android:layout_alignStart="@+id/btChoroby"
+            android:layout_alignEnd="@+id/btChoroby"
+            android:layout_alignBottom="@+id/btChoroby"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginBottom="10dp"
+            android:elevation="51dp"
+            android:text="Sprawdź objawy"
+            android:textAlignment="center"
+            android:textColor="#000000"
+            android:textSize="15dp" />
+
+        <View
+            android:id="@+id/btDiagnostyka"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="200dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginBottom="0dp"
+            android:background="@drawable/dashboard_style"
+            android:elevation="50dp" />
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="58dp"
+            android:layout_height="58dp"
+            android:layout_alignStart="@+id/btDiagnostyka"
+            android:layout_alignTop="@+id/btDiagnostyka"
+            android:layout_alignEnd="@+id/btDiagnostyka"
+            android:layout_alignBottom="@+id/btDiagnostyka"
+            android:layout_marginStart="33dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginEnd="33dp"
+            android:layout_marginBottom="35dp"
+            android:elevation="51dp"
+            app:srcCompat="@drawable/ic_healing" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/btDiagnostyka"
+            android:layout_alignEnd="@+id/btDiagnostyka"
+            android:layout_alignBottom="@+id/btDiagnostyka"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="14dp"
+            android:layout_marginBottom="10dp"
+            android:elevation="51dp"
+            android:text="Diagnostyka"
+            android:textColor="@color/black"
+            android:textSize="15dp" />
+
+    </RelativeLayout>
+
+</LinearLayout>

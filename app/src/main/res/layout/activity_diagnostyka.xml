@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".diagnostyka">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="73dp">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:background="@drawable/gradient_blue" />
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="72dp"
+            android:layout_height="65dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_centerInParent="true"
+            android:layout_marginStart="158dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="158dp"
+            android:layout_marginBottom="5dp"
+            app:srcCompat="@drawable/logo_iczmp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <View
+            android:id="@+id/btKardiologiczne"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="0dp"
+            android:layout_marginBottom="0dp"
+            android:background="@drawable/dashboard_style"
+            android:elevation="50dp" />
+
+        <pl.droidsonroids.gif.GifImageView
+            android:id="@+id/imageView3"
+            android:layout_width="58dp"
+            android:layout_height="58dp"
+            android:layout_alignStart="@+id/btKardiologiczne"
+            android:layout_alignTop="@+id/btKardiologiczne"
+            android:layout_alignEnd="@+id/btKardiologiczne"
+            android:layout_marginStart="33dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginEnd="33dp"
+            android:elevation="51dp"
+            android:src="@drawable/icons8_heart" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imageView3"
+            android:layout_alignStart="@+id/btKardiologiczne"
+            android:layout_alignEnd="@+id/btKardiologiczne"
+            android:layout_alignBottom="@+id/btKardiologiczne"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginBottom="10dp"
+            android:elevation="51dp"
+            android:text="Kardiologiczne"
+            android:textAlignment="center"
+            android:textColor="#000000"
+            android:textSize="15dp" />
+    </RelativeLayout>
+</LinearLayout>
