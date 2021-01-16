@@ -28,16 +28,22 @@
         android:textSize="30sp"
         />
 
+    <ImageView
+        android:id="@+id/imageView9"
+        android:layout_width="wrap_content"
+        android:layout_height="204dp"
+        app:srcCompat="@drawable/people_doctor" />
+
     <Button
         android:id="@+id/btStart"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:text="@string/zaczynajmy"
         android:layout_gravity="center"
-        android:fontFamily="@font/lato"
-        android:layout_marginTop="250dp"
-        android:textSize="15dp"
-        android:padding="20dp"
+        android:layout_marginTop="50dp"
         android:background="@color/blue"
-        />
+        android:fontFamily="@font/lato"
+        android:padding="20dp"
+        android:text="@string/zaczynajmy"
+        android:textSize="20sp" />
+
 </LinearLayout>

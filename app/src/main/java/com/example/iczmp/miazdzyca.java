@@ -2,12 +2,12 @@ package com.example.iczmp;
 
 import android.annotation.SuppressLint;
 import android.app.AlertDialog;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.Switch;
 import android.widget.TextView;
 
@@ -16,14 +16,25 @@ import androidx.appcompat.app.AppCompatActivity;
 public class miazdzyca extends AppCompatActivity {
 
     Switch switch1, switch2, switch3, switch4, switch5;
-    Button btDiagnozuj, btn_dialog;
+    Button btDiagnozuj;
+    ImageView ic_back;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_miazdzyca);
 
-        btn_dialog = findViewById(R.id.btn_dialog);
+        ic_back = findViewById(R.id.ic_back);
+
+        ic_back.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(view.getContext(), chr_kardiologiczne.class);
+                startActivity(intent);
+            }
+        });
+
+
         switch1 = findViewById(R.id.switch1);
         switch1.setTextOn("Tak");
         switch1.setTextOff("Nie");
@@ -54,43 +65,62 @@ public class miazdzyca extends AppCompatActivity {
                     AlertDialog.Builder builder = new AlertDialog.Builder(miazdzyca.this);
                     view = LayoutInflater.from(miazdzyca.this).inflate(R.layout.activity_diag_postive, null);
 
+                    //
+
                     TextView content = (TextView) view.findViewById(R.id.text_dialog);
+                    Button dialogButton = (Button) view.findViewById(R.id.btn_dialog);
 
-                    content.setText("Przy podanych objawach występuje podejrzenie miażdżycy.");
-
-                    builder.setView(view);
-                    builder.setPositiveButton("Pokaż sposoby leczenia",new DialogInterface.OnClickListener(){
-
+                    dialogButton.setOnClickListener(new View.OnClickListener(){
                         @Override
-                        public void onClick(DialogInterface dialogInterface, int i) {
-                            Intent intent = new Intent(miazdzyca.this,miazdzyca_leczenie.class);
-                            startActivity(intent);
+                        public void onClick(View view) {
+                            Intent intent = new Intent(view.getContext(), miazdzyca_leczenie.class);
+                            //you must put your map activity
+                            miazdzyca.this.startActivity(intent);
                         }
                     });
+                    //
+                    content.setText("Przy podanych objawach występuje poważne podejrzenie miażdżycy.");
+                    builder.setView(view);
+
                     builder.show();
                     
                 } else if (switch2.isChecked() && switch3.isChecked() && switch5.isChecked()) {
-                    AlertDialog alertDialog = new AlertDialog.Builder(miazdzyca.this).create();
-                    alertDialog.setTitle("Diagnoza");
-                    alertDialog.setMessage("Przy podanych objawach występuje lekkie podejrzenie miażdżycy.");
-                    alertDialog.setButton(AlertDialog.BUTTON_NEUTRAL, "Ok",
-                            new DialogInterface.OnClickListener() {
-                                public void onClick(DialogInterface dialog, int which) {
-                                    dialog.dismiss();
-                                }
-                            });
-                    alertDialog.show();
+                    AlertDialog.Builder builder = new AlertDialog.Builder(miazdzyca.this);
+                    view = LayoutInflater.from(miazdzyca.this).inflate(R.layout.activity_alert_orange, null);
+
+                    TextView content = (TextView) view.findViewById(R.id.text_dialog);
+                    Button dialogButton = (Button) view.findViewById(R.id.btn_dialog);
+
+                    dialogButton.setOnClickListener(new View.OnClickListener(){
+                        @Override
+                        public void onClick(View view) {
+                            Intent intent = new Intent(view.getContext(), miazdzyca_leczenie.class);
+                            //you must put your map activity
+                            miazdzyca.this.startActivity(intent);
+                        }
+                    });
+
+                    content.setText("Przy podanych objawach występuje podejrzenie miażdzcy.\n Zleć więcej badań.");
+                    builder.setView(view);
+                    builder.show();
                 } else {
                     AlertDialog alertDialog = new AlertDialog.Builder(miazdzyca.this).create();
-                    alertDialog.setTitle("Diagnoza");
-                    alertDialog.setMessage("Przy podanych objawach NIE występuje podejrzenie miażdżycy.");
-                    alertDialog.setButton(AlertDialog.BUTTON_NEUTRAL, "Ok",
-                            new DialogInterface.OnClickListener() {
-                                public void onClick(DialogInterface dialog, int which) {
-                                    dialog.dismiss();
-                                }
-                            });
-                    alertDialog.show();
+                    AlertDialog.Builder bulider = new AlertDialog.Builder(miazdzyca.this);
+                    view = LayoutInflater.from(miazdzyca.this).inflate(R.layout.activity_alert_green, null);
+
+                    TextView content = (TextView) view.findViewById(R.id.text_dialog);
+                    Button dialogButton = (Button) view.findViewById(R.id.btn_dialog);
+
+                    dialogButton.setOnClickListener(new View.OnClickListener(){
+                        @Override
+                        public void onClick(View view) {
+
+                        }
+                    });
+
+                    content.setText("Przy podanych objawach NIE występuje podejrzenie miażdzcy.");
+                    bulider.setView(view);
+                    bulider.show();
                 }
             }
         });

@@ -30,6 +30,14 @@
             android:layout_marginBottom="5dp"
             app:srcCompat="@drawable/logo_iczmp" />
 
+        <ImageView
+            android:id="@+id/ic_back"
+            android:layout_width="52dp"
+            android:layout_height="42dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="16dp"
+            app:srcCompat="@drawable/ic_arrow_back" />
+
     </RelativeLayout>
 
     <TextView
@@ -61,7 +69,8 @@
                 android:layout_height="wrap_content"
                 android:textSize="22sp"
                 android:padding="5dp"
-                android:thumbTint="@color/green"
+                app:track="@drawable/custom_track"
+                android:thumb="@drawable/custom_thumb"
                 android:text="Czy pacjent choruje na nadwagę, otyłość?" />
 
             <Switch
@@ -71,7 +80,8 @@
                 android:layout_height="wrap_content"
                 android:textSize="22sp"
                 android:padding="5dp"
-                android:thumbTint="@color/green"
+                app:track="@drawable/custom_track"
+                android:thumb="@drawable/custom_thumb"
                 android:text="Czy pacjent pali papierosy?" />
             <Switch
                 android:id="@+id/switch3"
@@ -80,7 +90,8 @@
                 android:layout_height="wrap_content"
                 android:textSize="22sp"
                 android:padding="5dp"
-                android:thumbTint="@color/green"
+                app:track="@drawable/custom_track"
+                android:thumb="@drawable/custom_thumb"
                 android:text="Czy pacjent choruje na nadciśnienie tętniczne?" />
             <Switch
                 android:id="@+id/switch4"
@@ -89,7 +100,8 @@
                 android:layout_height="wrap_content"
                 android:textSize="22sp"
                 android:padding="5dp"
-                android:thumbTint="@color/green"
+                app:track="@drawable/custom_track"
+                android:thumb="@drawable/custom_thumb"
                 android:text="Czy pacjent choruje na cukrzyce?" />
             <Switch
                 android:id="@+id/switch5"
@@ -98,7 +110,8 @@
                 android:layout_height="wrap_content"
                 android:textSize="22sp"
                 android:padding="5dp"
-                android:thumbTint="@color/green"
+                app:track="@drawable/custom_track"
+                android:thumb="@drawable/custom_thumb"
                 android:text="Czy pacjent ma wysoki poziom cholesterolu?" />
 
             <Button

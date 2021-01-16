@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".calculators">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="73dp">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="@drawable/gradient_blue" />
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="72dp"
+            android:layout_height="65dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_centerInParent="true"
+            android:layout_marginStart="158dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="158dp"
+            android:layout_marginBottom="5dp"
+            app:srcCompat="@drawable/logo_iczmp" />
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <View
+            android:id="@+id/btBMI"
+            android:layout_width="160dp"
+            android:layout_height="197dp"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="0dp"
+            android:background="@drawable/dashboard_style"
+            android:elevation="50dp" />
+
+        <ImageView
+            android:id="@+id/image_Diagnostyka"
+            android:layout_width="172dp"
+            android:layout_height="130dp"
+            android:layout_alignStart="@+id/btBMI"
+            android:layout_alignEnd="@+id/btBMI"
+            android:layout_alignBottom="@+id/btBMI"
+            android:layout_marginStart="6dp"
+            android:layout_marginEnd="4dp"
+            android:layout_marginBottom="7dp"
+            android:elevation="51dp"
+            app:srcCompat="@drawable/people_bmi" />
+
+
+        <TextView
+            android:id="@+id/textBMI"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/btBMI"
+            android:layout_alignTop="@+id/btBMI"
+            android:layout_alignEnd="@+id/btBMI"
+            android:layout_alignBottom="@+id/btBMI"
+            android:layout_marginStart="-1dp"
+            android:layout_marginTop="13dp"
+            android:layout_marginEnd="1dp"
+            android:layout_marginBottom="156dp"
+            android:elevation="51dp"
+            android:text="BMI"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            />
+
+    </RelativeLayout>
+</LinearLayout>

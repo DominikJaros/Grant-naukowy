@@ -14,5 +14,6 @@
         <li>badanie ultrasonograficzne z oceną dopplerowską przepływów krwi w tętnicach.</li>\n
     </string>
     <string name="miadzycaLeczenie">Często stosowanym zabiegiem jest angioplastyka. Polega na poszerzeniu naczyń krwionośnych, które zostały zwężone lub zamknięte w wyniku miażdżycy. Jest mało inwazyjną formą leczenia. W trakcie zabiegu wprowadza się stent poprzez tętnicę kończyny dolnej lub górnej, który na stałe zostaję w tętnicy wieńcowej, Innym sposobem jest leczenie chirurgiczne. Jeśli u chorego z różnych powodów nie można zastosować angioplastyki to wtedy stosuje się by-pasy.</string>
+    <string name="wiek">Wiek</string>
 
 </resources>

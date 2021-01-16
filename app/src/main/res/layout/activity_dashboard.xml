@@ -39,88 +39,183 @@
 
         <View
             android:id="@+id/btChoroby"
-            android:layout_width="120dp"
-            android:layout_height="120dp"
+            android:layout_width="wrap_content"
+            android:layout_height="140dp"
             android:layout_alignParentStart="true"
-            android:layout_marginStart="30dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="10dp"
             android:layout_marginTop="30dp"
-            android:layout_marginEnd="0dp"
+            android:layout_marginEnd="10dp"
             android:layout_marginBottom="0dp"
             android:background="@drawable/dashboard_style"
             android:elevation="50dp" />
 
-        <ImageView
-            android:id="@+id/imageView3"
-            android:layout_width="58dp"
-            android:layout_height="58dp"
-            android:layout_alignStart="@+id/btChoroby"
-            android:layout_alignTop="@+id/btChoroby"
-            android:layout_alignEnd="@+id/btChoroby"
-            android:layout_marginStart="33dp"
-            android:layout_marginTop="25dp"
-            android:layout_marginEnd="33dp"
-            android:elevation="51dp"
-            app:srcCompat="@drawable/ic_search" />
-
         <TextView
-            android:id="@+id/textView2"
-            android:layout_width="wrap_content"
+            android:id="@+id/textChoroby"
+            android:layout_width="283dp"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/imageView3"
             android:layout_alignStart="@+id/btChoroby"
-            android:layout_alignEnd="@+id/btChoroby"
             android:layout_alignBottom="@+id/btChoroby"
-            android:layout_marginStart="8dp"
+            android:layout_marginStart="4dp"
             android:layout_marginTop="5dp"
-            android:layout_marginEnd="5dp"
-            android:layout_marginBottom="10dp"
+            android:layout_marginEnd="-41dp"
+            android:layout_marginBottom="54dp"
+            android:layout_toStartOf="@+id/imageChoroby"
+            android:textAlignment="center"
             android:elevation="51dp"
             android:text="Sprawdź objawy"
-            android:textAlignment="center"
             android:textColor="#000000"
-            android:textSize="15dp" />
+            android:textSize="25sp"
+           />
 
         <View
             android:id="@+id/btDiagnostyka"
-            android:layout_width="120dp"
-            android:layout_height="120dp"
-            android:layout_alignParentEnd="true"
-            android:layout_marginStart="200dp"
+            android:layout_width="160dp"
+            android:layout_height="197dp"
+            android:layout_below="@+id/btChoroby"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="10dp"
             android:layout_marginTop="30dp"
-            android:layout_marginEnd="30dp"
             android:layout_marginBottom="0dp"
             android:background="@drawable/dashboard_style"
             android:elevation="50dp" />
 
         <ImageView
-            android:id="@+id/imageView4"
-            android:layout_width="58dp"
-            android:layout_height="58dp"
+            android:id="@+id/image_Diagnostyka"
+            android:layout_width="172dp"
+            android:layout_height="130dp"
+            android:layout_alignStart="@+id/btDiagnostyka"
+            android:layout_alignEnd="@+id/btDiagnostyka"
+            android:layout_alignBottom="@+id/btDiagnostyka"
+            android:layout_marginStart="6dp"
+            android:layout_marginEnd="4dp"
+            android:layout_marginBottom="7dp"
+            android:elevation="51dp"
+            app:srcCompat="@drawable/people_diagnostic" />
+
+
+        <TextView
+            android:id="@+id/textDiagnostyka"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_alignStart="@+id/btDiagnostyka"
             android:layout_alignTop="@+id/btDiagnostyka"
             android:layout_alignEnd="@+id/btDiagnostyka"
             android:layout_alignBottom="@+id/btDiagnostyka"
-            android:layout_marginStart="33dp"
-            android:layout_marginTop="25dp"
-            android:layout_marginEnd="33dp"
-            android:layout_marginBottom="35dp"
-            android:elevation="51dp"
-            app:srcCompat="@drawable/ic_healing" />
-
-        <TextView
-            android:id="@+id/textView4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignStart="@+id/btDiagnostyka"
-            android:layout_alignEnd="@+id/btDiagnostyka"
-            android:layout_alignBottom="@+id/btDiagnostyka"
-            android:layout_marginStart="20dp"
-            android:layout_marginEnd="14dp"
-            android:layout_marginBottom="10dp"
+            android:layout_marginStart="-1dp"
+            android:layout_marginTop="13dp"
+            android:layout_marginEnd="1dp"
+            android:layout_marginBottom="156dp"
             android:elevation="51dp"
             android:text="Diagnostyka"
+            android:textAlignment="center"
             android:textColor="@color/black"
-            android:textSize="15dp" />
+            android:textSize="25sp"
+             />
+
+        <View
+            android:id="@+id/btNews"
+            android:layout_width="160dp"
+            android:layout_height="197dp"
+            android:layout_below="@+id/btDiagnostyka"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="35dp"
+            android:background="@drawable/dashboard_style"
+            android:elevation="50dp" />
+
+        <ImageView
+            android:id="@+id/imageNews"
+            android:layout_width="172dp"
+            android:layout_height="130dp"
+            android:layout_alignStart="@+id/btNews"
+            android:layout_alignEnd="@+id/btNews"
+            android:layout_alignBottom="@+id/btNews"
+            android:layout_marginStart="6dp"
+            android:layout_marginEnd="4dp"
+            android:layout_marginBottom="7dp"
+            android:elevation="51dp"
+            app:srcCompat="@drawable/people_newes" />
+
+
+        <TextView
+            android:id="@+id/textNews"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/btNews"
+            android:layout_alignTop="@+id/btNews"
+            android:layout_alignEnd="@+id/btNews"
+            android:layout_alignBottom="@+id/btNews"
+            android:layout_marginStart="-1dp"
+            android:layout_marginTop="13dp"
+            android:layout_marginEnd="1dp"
+            android:layout_marginBottom="156dp"
+            android:elevation="51dp"
+            android:text="Aktualności"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            />
+
+
+        <View
+            android:id="@+id/btCalculator"
+            android:layout_width="210dp"
+            android:layout_height="426dp"
+            android:layout_below="@+id/btChoroby"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="7dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="6dp"
+            android:layout_marginBottom="35dp"
+            android:layout_toEndOf="@+id/btDiagnostyka"
+            android:background="@drawable/dashboard_style"
+            android:elevation="50dp" />
+
+        <TextView
+            android:id="@+id/textCalulator"
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:layout_alignStart="@+id/btCalculator"
+            android:layout_alignTop="@+id/btCalculator"
+            android:layout_alignEnd="@+id/btCalculator"
+            android:layout_marginStart="18dp"
+            android:layout_marginTop="13dp"
+            android:layout_marginEnd="18dp"
+            android:elevation="51dp"
+            android:text="Kalkulatory"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+             />
+
+        <ImageView
+            android:id="@+id/imageChoroby"
+            android:layout_width="116dp"
+            android:layout_height="114dp"
+            android:layout_alignEnd="@+id/btChoroby"
+            android:layout_alignBottom="@+id/btChoroby"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="14dp"
+            android:elevation="51dp"
+            app:srcCompat="@drawable/people_search" />
+
+        <ImageView
+            android:id="@+id/imageCalculator"
+            android:layout_width="193dp"
+            android:layout_height="293dp"
+            android:layout_alignStart="@+id/btCalculator"
+            android:layout_alignEnd="@+id/btCalculator"
+            android:layout_alignBottom="@+id/btCalculator"
+            android:layout_marginStart="7dp"
+            android:layout_marginEnd="6dp"
+            android:layout_marginBottom="47dp"
+            android:elevation="51dp"
+            app:srcCompat="@drawable/people_calc" />
+
 
     </RelativeLayout>
 

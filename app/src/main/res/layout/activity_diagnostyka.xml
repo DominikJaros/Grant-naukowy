@@ -30,6 +30,14 @@
             android:layout_marginBottom="5dp"
             app:srcCompat="@drawable/logo_iczmp" />
 
+        <ImageView
+            android:id="@+id/ic_back"
+            android:layout_width="52dp"
+            android:layout_height="42dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="16dp"
+            app:srcCompat="@drawable/ic_arrow_back" />
+
     </RelativeLayout>
 
     <RelativeLayout
@@ -39,45 +47,87 @@
 
         <View
             android:id="@+id/btKardiologiczne"
-            android:layout_width="120dp"
-            android:layout_height="120dp"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
             android:layout_alignParentStart="true"
-            android:layout_marginStart="30dp"
+            android:layout_marginStart="15dp"
             android:layout_marginTop="30dp"
             android:layout_marginEnd="0dp"
             android:layout_marginBottom="0dp"
             android:background="@drawable/dashboard_style"
             android:elevation="50dp" />
 
-        <pl.droidsonroids.gif.GifImageView
+        <ImageView
             android:id="@+id/imageView3"
-            android:layout_width="58dp"
-            android:layout_height="58dp"
+            android:layout_width="120dp"
+            android:layout_height="100dp"
             android:layout_alignStart="@+id/btKardiologiczne"
             android:layout_alignTop="@+id/btKardiologiczne"
             android:layout_alignEnd="@+id/btKardiologiczne"
-            android:layout_marginStart="33dp"
-            android:layout_marginTop="25dp"
-            android:layout_marginEnd="33dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="16dp"
             android:elevation="51dp"
-            android:src="@drawable/icons8_heart" />
+            android:src="@drawable/people_heart" />
 
         <TextView
-            android:id="@+id/textView2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/imageView3"
+            android:id="@+id/textChoroby"
+            android:layout_width="135dp"
+            android:layout_height="30dp"
             android:layout_alignStart="@+id/btKardiologiczne"
             android:layout_alignEnd="@+id/btKardiologiczne"
             android:layout_alignBottom="@+id/btKardiologiczne"
             android:layout_marginStart="8dp"
-            android:layout_marginTop="5dp"
-            android:layout_marginEnd="5dp"
-            android:layout_marginBottom="10dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="17dp"
             android:elevation="51dp"
             android:text="Kardiologiczne"
             android:textAlignment="center"
             android:textColor="#000000"
-            android:textSize="15dp" />
+            android:textSize="20dp"
+             />
+
+        <View
+            android:id="@+id/btNeurologiczne"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginBottom="0dp"
+            android:layout_toEndOf="@+id/btKardiologiczne"
+            android:background="@drawable/dashboard_style"
+            android:elevation="50dp" />
+
+        <ImageView
+            android:id="@+id/imageChoroby"
+            android:layout_width="120dp"
+            android:layout_height="100dp"
+            android:layout_alignStart="@+id/btNeurologiczne"
+            android:layout_alignTop="@+id/btNeurologiczne"
+            android:layout_alignEnd="@+id/btNeurologiczne"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="16dp"
+            android:elevation="51dp"
+            android:src="@drawable/chr_neurologiczne" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="135dp"
+            android:layout_height="30dp"
+            android:layout_alignStart="@+id/btNeurologiczne"
+            android:layout_alignEnd="@+id/btNeurologiczne"
+            android:layout_alignBottom="@+id/btNeurologiczne"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="17dp"
+            android:elevation="51dp"
+            android:text="Neurologiczne"
+            android:textAlignment="center"
+            android:textColor="#000000"
+            android:textSize="20dp"
+            />
     </RelativeLayout>
 </LinearLayout>
