@@ -17,14 +17,14 @@
     <string name="wiek">Wiek</string>
     <string name="man">Mężczyzna</string>
     <string name="woman">Kobieta</string>
-    <string name="very_severely_underweight">" bardzo poważna niedowaga"</string>
+    <string name="very_severely_underweight">"Bardzo poważna niedowaga"</string>
     <string name="severely_underweight">"Ciężka niedowaga "</string>
     <string name="underweight">Niedowaga</string>
     <string name="normal">Norma</string>
     <string name="overweight">Nadwaga</string>
     <string name="obese_class_i">"Otyłość klasy I "</string>
-    <string name="obese_class_ii">otyłość klasy II</string>
-    <string name="obese_class_iii">otyłość klasy III</string>
+    <string name="obese_class_ii">Otyłość klasy II</string>
+    <string name="obese_class_iii">Otyłość klasy III</string>
     <string name="underweightBMI">BMI poniżej 18,5 wskazuje, że masz niedowagę, więc może być konieczne przybranie na wadze.</string>
     <string name="normalBMI">BMI wskazuje, że masz prawidłową wagę dla swojego wzrostu. Utrzymując zdrową wagę, zmniejszasz ryzyko wystąpienia poważnych problemów zdrowotnych.</string>
     <string name="overweightBMI">BMI 25-29,9 wskazuje, że masz niewielką nadwagę. Ze względów zdrowotnych mogę zalecić utratę wagi. Zaleca się skonsultowanie się z lekarzem lub dietetykiem w celu uzyskania porady.</string>

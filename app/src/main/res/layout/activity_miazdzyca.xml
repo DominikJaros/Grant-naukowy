@@ -31,7 +31,7 @@
             app:srcCompat="@drawable/logo_iczmp" />
 
         <ImageView
-            android:id="@+id/ic_back"
+            android:id="@+id/btBack"
             android:layout_width="52dp"
             android:layout_height="42dp"
             android:layout_alignParentBottom="true"
@@ -69,6 +69,9 @@
                 android:layout_height="wrap_content"
                 android:textSize="22sp"
                 android:padding="5dp"
+                android:showText="true"
+                android:textOn="Tak"
+                android:textOff="Nie"
                 app:track="@drawable/custom_track"
                 android:thumb="@drawable/custom_thumb"
                 android:text="Czy pacjent choruje na nadwagę, otyłość?" />
@@ -82,6 +85,9 @@
                 android:padding="5dp"
                 app:track="@drawable/custom_track"
                 android:thumb="@drawable/custom_thumb"
+                android:showText="true"
+                android:textOn="Tak"
+                android:textOff="Nie"
                 android:text="Czy pacjent pali papierosy?" />
             <Switch
                 android:id="@+id/switch3"
@@ -92,6 +98,9 @@
                 android:padding="5dp"
                 app:track="@drawable/custom_track"
                 android:thumb="@drawable/custom_thumb"
+                android:showText="true"
+                android:textOn="Tak"
+                android:textOff="Nie"
                 android:text="Czy pacjent choruje na nadciśnienie tętniczne?" />
             <Switch
                 android:id="@+id/switch4"
@@ -102,6 +111,9 @@
                 android:padding="5dp"
                 app:track="@drawable/custom_track"
                 android:thumb="@drawable/custom_thumb"
+                android:showText="true"
+                android:textOn="Tak"
+                android:textOff="Nie"
                 android:text="Czy pacjent choruje na cukrzyce?" />
             <Switch
                 android:id="@+id/switch5"
@@ -112,15 +124,20 @@
                 android:padding="5dp"
                 app:track="@drawable/custom_track"
                 android:thumb="@drawable/custom_thumb"
+                android:showText="true"
+                android:textOn="Tak"
+                android:textOff="Nie"
                 android:text="Czy pacjent ma wysoki poziom cholesterolu?" />
 
             <Button
                 android:id="@+id/btDiagnozuj"
-                android:layout_width="200dp"
-                android:layout_height="60dp"
-                android:background="@color/green"
+                android:layout_width="170dp"
+                android:layout_height="70dp"
+                android:background="@drawable/button_radius"
                 android:layout_marginTop="100dp"
                 android:layout_marginStart="80dp"
+                android:textSize="20sp"
+                android:textStyle="bold"
                 android:text="Diagnozuj" />
         </LinearLayout>
     </ScrollView>

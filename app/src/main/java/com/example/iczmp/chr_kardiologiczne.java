@@ -23,7 +23,7 @@ public class chr_kardiologiczne extends AppCompatActivity {
         btMiazdzyca = findViewById(R.id.btMiazdzyca);
         RelativeLayout = findViewById(R.id.RelativeLayout);
 
-        ic_back = findViewById(R.id.ic_back);
+        ic_back = findViewById(R.id.btBack);
 
         ic_back.setOnClickListener(new View.OnClickListener(){
             @Override

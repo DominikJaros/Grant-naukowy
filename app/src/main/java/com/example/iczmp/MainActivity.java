@@ -8,11 +8,14 @@ import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
 
     Button btStart;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,7 +23,9 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         buttonClick();
-
+        btStart.setAlpha(0f);
+        btStart.setTranslationY(50f);
+        btStart.animate().alpha(1f).translationYBy(-50).setDuration(1500);
     }
 
     private void buttonClick() {
@@ -29,7 +34,6 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(view.getContext(), dashboard.class);
-                intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
                 view.getContext().startActivity(intent);}
         });
     }

@@ -25,7 +25,7 @@ public class diagnostyka extends AppCompatActivity {
         fadeIn = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.fade_in);
 
 
-        ic_back = findViewById(R.id.ic_back);
+        ic_back = findViewById(R.id.btBack);
 
         ic_back.setOnClickListener(new View.OnClickListener(){
             @Override

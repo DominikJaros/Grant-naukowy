@@ -30,7 +30,7 @@
             android:layout_marginBottom="5dp"
             app:srcCompat="@drawable/logo_iczmp" />
         <ImageView
-            android:id="@+id/ic_back"
+            android:id="@+id/btBack"
             android:layout_width="52dp"
             android:layout_height="42dp"
             android:layout_alignParentBottom="true"
@@ -147,16 +147,20 @@
             android:layout_marginStart="141dp"
             android:layout_marginEnd="139dp"
             android:layout_marginBottom="207dp"
-            android:gravity="center"
+            android:background="@drawable/button_radius"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
             android:text="Oblicz" />
 
         <RelativeLayout
+            android:id="@+id/resultsView"
             android:layout_width="match_parent"
             android:layout_height="200dp"
             android:layout_alignParentBottom="true"
             android:layout_marginBottom="0dp"
             android:background="@drawable/view_custom_round"
-            android:elevation="50dp">
+            android:elevation="50dp"
+            android:visibility="invisible">
 
             <TextView
                 android:id="@+id/textView6"
@@ -167,8 +171,7 @@
                 android:layout_marginStart="40dp"
                 android:layout_marginTop="15dp"
                 android:text="Wynik BMI"
-                android:textSize="20sp"
-              />
+                android:textSize="20sp" />
 
             <TextView
                 android:id="@+id/result"
@@ -178,10 +181,9 @@
                 android:layout_alignParentStart="true"
                 android:layout_marginStart="40dp"
                 android:layout_marginTop="10dp"
-                android:textSize="50sp"
-                android:padding="8dp"
                 android:maxLength="4"
-                />
+                android:padding="8dp"
+                android:textSize="50sp" />
 
             <TextView
                 android:id="@+id/textView7"
@@ -200,7 +202,7 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/textView7"
                 android:layout_alignParentEnd="true"
-                android:layout_marginStart="50dp"
+                android:layout_marginStart="66dp"
                 android:layout_marginTop="10dp"
                 android:layout_toEndOf="@+id/textView6"
                 android:text=""

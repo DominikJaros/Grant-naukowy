@@ -1,29 +1,31 @@
 package com.example.iczmp;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.content.ContextCompat;
-
-import android.annotation.SuppressLint;
 import android.content.Context;
-import android.graphics.Color;
-import android.graphics.drawable.Drawable;
+import android.content.Intent;
 import android.os.Bundle;
-import android.text.Layout;
 import android.text.TextUtils;
+import android.view.MotionEvent;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class calculatorBMI extends AppCompatActivity {
     EditText btWeight, btHeight;
     Button btCheck;
-    RelativeLayout layoutColors;
+    ImageView btBack;
+    RelativeLayout layoutColors, resultsView;
     TextView result, category, textWeight, textHeight, textGender, information;
     RadioButton radioWomen, radioMan;
+    Animation slideDown;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,8 +36,10 @@ public class calculatorBMI extends AppCompatActivity {
         btHeight = findViewById(R.id.btHeight);
         btWeight = findViewById(R.id.btWeight);
         btCheck = findViewById(R.id.btCheck);
+        btBack = findViewById(R.id.btBack);
         //
         layoutColors = findViewById(R.id.layoutColors);
+        resultsView = findViewById(R.id.resultsView);
         //
         textWeight = findViewById(R.id.textWeight);
         textHeight = findViewById(R.id.textHeight);
@@ -46,14 +50,38 @@ public class calculatorBMI extends AppCompatActivity {
         //
         radioWomen = findViewById(R.id.radioWomen);
         radioMan = findViewById(R.id.radioMen);
+        //
+        slideDown = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.left_to_right_animation);
 
 
         btCheck.setOnClickListener(this::onClick);
+        btBack.setOnClickListener(this::onClick);
+
+
+        btBack.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(view.getContext(), calculators.class);
+                startActivity(intent);
+            }
+        });
 
     }
 
     private void onClick(View view) {
-        Calculate();
+        if (TextUtils.isEmpty(btHeight.getText().toString())) {
+            btHeight.setError("Pole nie może być puste.");
+        } else if (TextUtils.isEmpty(btWeight.getText())) {
+            btWeight.setError("Pole nie może być puste.");
+        } else {
+            Calculate();
+            resultsView.setVisibility(View.VISIBLE);
+            resultsView.setAlpha(0f);
+            resultsView.setTranslationY(50f);
+            resultsView.animate().alpha(1f).translationYBy(-100).setDuration(800);
+
+        }
+
     }
 
     private void Calculate() {
@@ -70,76 +98,99 @@ public class calculatorBMI extends AppCompatActivity {
 
             displayBMI(bmi);
 
-
         }
     }
+
+    //turn off keyboard
+    @Override
+    public boolean dispatchTouchEvent(MotionEvent ev) {
+        if (getCurrentFocus() != null) {
+            InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
+            imm.hideSoftInputFromWindow(getCurrentFocus().getWindowToken(), 0);
+        }
+        return super.dispatchTouchEvent(ev);
+    }
+//
 
     private void displayBMI(float bmi) {
         String bmiLabel = "";
 
         if (Float.compare(bmi, 15f) <= 0) {
             bmiLabel = getString(R.string.very_severely_underweight);
-            layoutColors.setBackgroundResource(R.drawable.gradient_red);
-            result.setBackgroundResource(R.drawable.gradient_red);
             information.setText(getResources().getString(R.string.underweightBMI));
-            changeColor();
+            changeTextColor();
+            changeColorRed();
 
-        } else if (Float.compare(bmi, 15f) > 0  &&  Float.compare(bmi, 16f) <= 0) {
-            layoutColors.setBackgroundResource(R.drawable.gradient_red);
+        } else if (Float.compare(bmi, 15f) > 0 && Float.compare(bmi, 16f) <= 0) {
             bmiLabel = getString(R.string.severely_underweight);
-            result.setBackgroundResource(R.drawable.gradient_red);
             information.setText(getResources().getString(R.string.underweightBMI));
-            changeColor();
+            changeTextColor();
+            changeColorRed();
 
-        } else if (Float.compare(bmi, 16f) > 0  &&  Float.compare(bmi, 18.5f) <= 0) {
+        } else if (Float.compare(bmi, 16f) > 0 && Float.compare(bmi, 18.5f) <= 0) {
             bmiLabel = getString(R.string.underweight);
-            layoutColors.setBackgroundResource(R.drawable.gradient_orange);
-            result.setBackgroundResource(R.drawable.gradient_orange);
             information.setText(getResources().getString(R.string.underweightBMI));
-            changeColor();
-        } else if (Float.compare(bmi, 18.5f) > 0  &&  Float.compare(bmi, 25f) <= 0) {
+            changeTextColor();
+            changeColorOrange();
+        } else if (Float.compare(bmi, 18.5f) > 0 && Float.compare(bmi, 25f) <= 0) {
             bmiLabel = getString(R.string.normal);
-            layoutColors.setBackgroundResource(R.drawable.gradient_green);
-            result.setBackgroundResource(R.drawable.gradient_green);
             information.setText(getResources().getString(R.string.normalBMI));
-            changeColor();
-        } else if (Float.compare(bmi, 25f) > 0  &&  Float.compare(bmi, 30f) <= 0) {
+            changeTextColor();
+            changeColorGreen();
+
+        } else if (Float.compare(bmi, 25f) > 0 && Float.compare(bmi, 30f) <= 0) {
             bmiLabel = getString(R.string.overweight);
-            layoutColors.setBackgroundResource(R.drawable.gradient_orange);
-            result.setBackgroundResource(R.drawable.gradient_orange);
             information.setText(getResources().getString(R.string.overweightBMI));
-            changeColor();
+            changeTextColor();
+            changeColorOrange();
 
-        } else if (Float.compare(bmi, 30f) > 0  &&  Float.compare(bmi, 35f) <= 0) {
+
+        } else if (Float.compare(bmi, 30f) > 0 && Float.compare(bmi, 35f) <= 0) {
             bmiLabel = getString(R.string.obese_class_i);
-            layoutColors.setBackgroundResource(R.drawable.gradient_red);
-            result.setBackgroundResource(R.drawable.gradient_red);
             information.setText(getResources().getString(R.string.overweightBMI));
-            changeColor();
+            changeTextColor();
+            changeColorRed();
 
-        } else if (Float.compare(bmi, 35f) > 0  &&  Float.compare(bmi, 40f) <= 0) {
+
+        } else if (Float.compare(bmi, 35f) > 0 && Float.compare(bmi, 40f) <= 0) {
             bmiLabel = getString(R.string.obese_class_ii);
-            result.setBackgroundResource(R.drawable.gradient_red);
             information.setText(getResources().getString(R.string.highOverweightBMI));
-            changeColor();
+            changeTextColor();
+            changeColorRed();
 
         } else {
             bmiLabel = getString(R.string.obese_class_iii);
-            layoutColors.setBackgroundResource(R.drawable.gradient_red);
-            result.setBackgroundResource(R.drawable.gradient_red);
             information.setText(getResources().getString(R.string.highOverweightBMI));
-            changeColor();
+            changeTextColor();
+            changeColorRed();
+
         }
         String bmiResult = Float.toString(bmi);
         category.setText(bmiLabel);
         result.setText(bmiResult);
     }
 
-    private void changeColor() {
+    private void changeTextColor() {
         textWeight.setTextColor(getResources().getColor(R.color.white));
         textHeight.setTextColor(getResources().getColor(R.color.white));
         textGender.setTextColor(getResources().getColor(R.color.white));
         radioWomen.setTextColor(getResources().getColor(R.color.white));
         radioMan.setTextColor(getResources().getColor(R.color.white));
     }
+
+    private void changeColorRed() {
+        layoutColors.setBackgroundResource(R.drawable.gradient_red);
+        result.setBackgroundResource(R.drawable.gradient_red);
+    }
+
+    private void changeColorOrange() {
+        layoutColors.setBackgroundResource(R.drawable.gradient_orange);
+        result.setBackgroundResource(R.drawable.gradient_orange);
+    }
+
+    private void changeColorGreen() {
+        layoutColors.setBackgroundResource(R.drawable.gradient_green);
+        result.setBackgroundResource(R.drawable.gradient_green);
+    }
+
 }

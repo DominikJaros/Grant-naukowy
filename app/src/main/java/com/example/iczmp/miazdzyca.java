@@ -24,7 +24,7 @@ public class miazdzyca extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_miazdzyca);
 
-        ic_back = findViewById(R.id.ic_back);
+        ic_back = findViewById(R.id.btBack);
 
         ic_back.setOnClickListener(new View.OnClickListener(){
             @Override
