@@ -58,7 +58,7 @@ public class calculatorBMI extends AppCompatActivity {
         btBack.setOnClickListener(this::onClick);
 
 
-        btBack.setOnClickListener(new View.OnClickListener(){
+        btBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(view.getContext(), calculators.class);
@@ -77,7 +77,7 @@ public class calculatorBMI extends AppCompatActivity {
             Calculate();
             resultsView.setVisibility(View.VISIBLE);
             resultsView.setAlpha(0f);
-            resultsView.setTranslationY(50f);
+            resultsView.setTranslationY(100f);
             resultsView.animate().alpha(1f).translationYBy(-100).setDuration(800);
 
         }

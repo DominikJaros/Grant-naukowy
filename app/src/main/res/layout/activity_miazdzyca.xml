@@ -131,7 +131,7 @@
 
             <Button
                 android:id="@+id/btDiagnozuj"
-                android:layout_width="170dp"
+                android:layout_width="250dp"
                 android:layout_height="70dp"
                 android:background="@drawable/button_radius"
                 android:layout_marginTop="100dp"
@@ -139,7 +139,9 @@
                 android:textSize="20sp"
                 android:textStyle="bold"
                 android:text="Diagnozuj" />
+
         </LinearLayout>
     </ScrollView>
+
 
 </LinearLayout>

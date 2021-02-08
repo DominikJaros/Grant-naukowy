@@ -8,6 +8,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.Switch;
 import android.widget.TextView;
 
@@ -25,6 +26,7 @@ public class miazdzyca extends AppCompatActivity {
         setContentView(R.layout.activity_miazdzyca);
 
         ic_back = findViewById(R.id.btBack);
+
 
         ic_back.setOnClickListener(new View.OnClickListener(){
             @Override
@@ -65,7 +67,6 @@ public class miazdzyca extends AppCompatActivity {
                     AlertDialog.Builder builder = new AlertDialog.Builder(miazdzyca.this);
                     view = LayoutInflater.from(miazdzyca.this).inflate(R.layout.activity_diag_postive, null);
 
-                    //
 
                     TextView content = (TextView) view.findViewById(R.id.text_dialog);
                     Button dialogButton = (Button) view.findViewById(R.id.btn_dialog);
@@ -80,9 +81,9 @@ public class miazdzyca extends AppCompatActivity {
                     });
                     //
                     content.setText("Przy podanych objawach występuje poważne podejrzenie miażdżycy.");
-                    builder.setView(view);
+                    //builder.setView(view);
 
-                    builder.show();
+                  //  builder.show();
                     
                 } else if (switch2.isChecked() && switch3.isChecked() && switch5.isChecked()) {
                     AlertDialog.Builder builder = new AlertDialog.Builder(miazdzyca.this);
