@@ -29,28 +29,37 @@
             android:layout_marginEnd="158dp"
             android:layout_marginBottom="5dp"
             app:srcCompat="@drawable/logo_iczmp" />
+        
+        <ImageView
+            android:id="@+id/btBack"
+            android:layout_width="52dp"
+            android:layout_height="42dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="16dp"
+            app:srcCompat="@drawable/ic_arrow_back" />
 
     </RelativeLayout>
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="match_parent"
-        android:layout_height="65dp"
-        android:layout_marginTop="25dp"
-        android:text="Miażdżyca - diagnostyka i leczenie"
-        android:textAlignment="center"
-        android:textStyle="bold"
-        android:textAllCaps="true"
-        android:textColor="@color/black"
-        android:textSize="25sp" />
 
     <ScrollView
         android:layout_width="match_parent"
+        android:padding="5dp"
         android:layout_height="570dp">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical" >
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="match_parent"
+                android:layout_height="65dp"
+                android:layout_marginTop="25dp"
+                android:text="Miażdżyca - diagnostyka i leczenie"
+                android:textAlignment="center"
+                android:textStyle="bold"
+                android:textAllCaps="true"
+                android:textColor="@color/black"
+                android:textSize="25sp" />
 
             <TextView
                 android:id="@+id/textNews"

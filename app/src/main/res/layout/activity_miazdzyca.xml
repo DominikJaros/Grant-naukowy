@@ -129,16 +129,17 @@
                 android:textOff="Nie"
                 android:text="Czy pacjent ma wysoki poziom cholesterolu?" />
 
-            <Button
+            <android.widget.Button
                 android:id="@+id/btDiagnozuj"
                 android:layout_width="250dp"
                 android:layout_height="70dp"
-                android:background="@drawable/button_radius"
+                android:layout_marginStart="50dp"
                 android:layout_marginTop="100dp"
-                android:layout_marginStart="80dp"
-                android:textSize="20sp"
-                android:textStyle="bold"
-                android:text="Diagnozuj" />
+                android:background="@drawable/button_normal_gradient"
+                android:text="Diagnozuj"
+                android:textColor="@color/white"
+                android:textSize="25sp"
+                android:textStyle="bold" />
 
         </LinearLayout>
     </ScrollView>

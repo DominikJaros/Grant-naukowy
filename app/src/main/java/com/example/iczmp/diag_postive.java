@@ -11,7 +11,7 @@ public class diag_postive extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_diag_postive);
+        setContentView(R.layout.activity_alert_red);
 
         btnHealing = findViewById(R.id.btn_dialog);
     }

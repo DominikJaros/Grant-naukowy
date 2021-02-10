@@ -10,7 +10,7 @@
         android:layout_height="120dp"
         android:id="@+id/a"
         android:gravity="center"
-        android:background="#FF9800"
+        android:background="@drawable/gradient_orange"
         android:src="@drawable/ic_report"
         android:scaleType="fitCenter" />
 
@@ -19,25 +19,27 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="TEXTO"
+        android:padding="5dp"
         android:layout_below="@+id/a"
         android:layout_marginTop="20dp"
         android:layout_marginLeft="4dp"
         android:layout_marginRight="4dp"
         android:layout_marginBottom="20dp"
-        android:textSize="18sp"
-        android:textColor="#ff000000"
+        android:textSize="20sp"
+        android:textColor="@color/black"
         android:layout_centerHorizontal="true"
         android:gravity="center_horizontal" />
 
-    <Button
+    <android.widget.Button
         android:id="@+id/btn_dialog"
-        android:layout_width="wrap_content"
+        android:layout_width="200dp"
         android:layout_height="50dp"
-        android:text="Sprawdź sposoby diagnozy"
+        android:text="Diagnozuj"
         android:gravity="center_vertical|center_horizontal"
         android:layout_below="@+id/text_dialog"
         android:layout_marginBottom="20dp"
-        android:backgroundTint="#FF9800"
+        android:background = "@drawable/gradient_orange"
+        android:textSize="20sp"
         android:layout_centerHorizontal="true"
         android:textColor="#ffffffff" />
 
