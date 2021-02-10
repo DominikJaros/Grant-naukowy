@@ -34,7 +34,7 @@
         android:id="@+id/btn_dialog"
         android:layout_width="200dp"
         android:layout_height="50dp"
-        android:text="Diagnozuj"
+        android:text="Sposoby leczenia"
         android:gravity="center_vertical|center_horizontal"
         android:layout_below="@+id/text_dialog"
         android:layout_marginBottom="20dp"

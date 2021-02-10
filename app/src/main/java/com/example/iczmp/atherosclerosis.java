@@ -12,11 +12,10 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.Switch;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class miazdzyca extends AppCompatActivity {
+public class atherosclerosis extends AppCompatActivity {
 
     Switch switch1, switch2, switch3, switch4, switch5;
     Button btDiagnozuj, dialogButton;
@@ -25,7 +24,7 @@ public class miazdzyca extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_miazdzyca);
+        setContentView(R.layout.activity_atherosclerosis);
 
         ic_back = findViewById(R.id.btBack);
 
@@ -33,7 +32,7 @@ public class miazdzyca extends AppCompatActivity {
         ic_back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(view.getContext(), chr_kardiologiczne.class);
+                Intent intent = new Intent(view.getContext(), cardiological_diseases.class);
                 startActivity(intent);
             }
         });
@@ -66,20 +65,18 @@ public class miazdzyca extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if (switch1.isChecked() && switch2.isChecked() && switch3.isChecked()) {
-                    RedAlert();
+                    redAlert();
                 } else if (switch2.isChecked() && switch3.isChecked() && switch5.isChecked()) {
-                    OrangeAlert();
+                    orangeAlert();
                 } else {
-                    GreenAlert();
+                    greenAlert();
                 }
             }
         });
     }
 
-    private void GreenAlert() {
-        Context context;
+    private void greenAlert() {
         LayoutInflater inflater = LayoutInflater.from(this);
-        ViewGroup root;
 
         View view = inflater.inflate(R.layout.activity_alert_green, null);
 
@@ -101,10 +98,8 @@ public class miazdzyca extends AppCompatActivity {
         });
     }
 
-    private void OrangeAlert() {
-        Context context;
+    private void orangeAlert() {
         LayoutInflater inflater = LayoutInflater.from(this);
-        ViewGroup root;
 
         View view = inflater.inflate(R.layout.activity_alert_orange, null);
 
@@ -121,18 +116,16 @@ public class miazdzyca extends AppCompatActivity {
         dialogButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(view.getContext(), miazdzyca_leczenie.class);
+                Intent intent = new Intent(view.getContext(), atherosclerosis_diagnosis.class);
                 //you must put your map activity
-                miazdzyca.this.startActivity(intent);
+                atherosclerosis.this.startActivity(intent);
                 alertDialog.dismiss();
             }
         });
     }
 
-    private void RedAlert() {
-        Context context;
+    private void redAlert() {
         LayoutInflater inflater = LayoutInflater.from(this);
-        ViewGroup root;
 
         View view = inflater.inflate(R.layout.activity_alert_red, null);
 
@@ -150,9 +143,9 @@ public class miazdzyca extends AppCompatActivity {
         dialogButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(view.getContext(), miazdzyca_leczenie.class);
+                Intent intent = new Intent(view.getContext(), atherosclerosis_diagnosis.class);
                 //you must put your map activity
-                miazdzyca.this.startActivity(intent);
+                atherosclerosis.this.startActivity(intent);
                 alertDialog.dismiss();
             }
         });

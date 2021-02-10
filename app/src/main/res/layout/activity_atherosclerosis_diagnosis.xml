@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".miazdzyca_leczenie">
+    tools:context=".atherosclerosis_diagnosis">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -29,7 +29,7 @@
             android:layout_marginEnd="158dp"
             android:layout_marginBottom="5dp"
             app:srcCompat="@drawable/logo_iczmp" />
-        
+
         <ImageView
             android:id="@+id/btBack"
             android:layout_width="52dp"

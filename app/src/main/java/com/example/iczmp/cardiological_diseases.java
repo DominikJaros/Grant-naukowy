@@ -9,40 +9,37 @@ import android.widget.ImageView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class diagnostyka extends AppCompatActivity {
+public class cardiological_diseases extends AppCompatActivity {
 
-    View btKardiologiczne, RelativeLayout;
+    View btMiazdzyca, RelativeLayout;
     Animation fadeIn;
     ImageView ic_back;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_diagnostyka);
+        setContentView(R.layout.activity_cardiological_diseases);
 
-        btKardiologiczne = findViewById(R.id.btKardiologiczne);
+        btMiazdzyca = findViewById(R.id.btMiazdzyca);
         RelativeLayout = findViewById(R.id.RelativeLayout);
-        fadeIn = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.fade_in);
-
 
         ic_back = findViewById(R.id.btBack);
 
         ic_back.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(view.getContext(), dashboard.class);
+                Intent intent = new Intent(view.getContext(), diagnostics.class);
                 startActivity(intent);
             }
         });
 
+        fadeIn = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.fade_in);
         animation();
 
-
-
-        btKardiologiczne.setOnClickListener(new View.OnClickListener() {
+        btMiazdzyca.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(view.getContext(), chr_kardiologiczne.class);
+                Intent intent = new Intent(view.getContext(), atherosclerosis.class);
                 startActivity(intent);
             }
         });

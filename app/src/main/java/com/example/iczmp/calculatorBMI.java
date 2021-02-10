@@ -74,7 +74,7 @@ public class calculatorBMI extends AppCompatActivity {
         } else if (TextUtils.isEmpty(btWeight.getText())) {
             btWeight.setError("Pole nie może być puste.");
         } else {
-            Calculate();
+            calculate();
             resultsView.setVisibility(View.VISIBLE);
             resultsView.setAlpha(0f);
             resultsView.setTranslationY(100f);
@@ -84,7 +84,7 @@ public class calculatorBMI extends AppCompatActivity {
 
     }
 
-    private void Calculate() {
+    private void calculate() {
 
         String heightStr = btHeight.getText().toString();
         String weightStr = btWeight.getText().toString();

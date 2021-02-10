@@ -4,11 +4,11 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-public class alert_orange extends AppCompatActivity {
+public class atherosclerosis_diagnosis extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_alert_orange);
+        setContentView(R.layout.activity_atherosclerosis_diagnosis);
     }
 }

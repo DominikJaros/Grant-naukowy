@@ -44,19 +44,19 @@ public class dashboard extends AppCompatActivity {
         moveLeft = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.push_left0_in);
 
        //
-        Animation();
+        animation();
 
         btCalulator.setOnClickListener(view -> {
             Intent intent = new Intent(view.getContext(), calculators.class);
             startActivity(intent);
         });
         btDiagnostyka.setOnClickListener(view -> {
-            Intent intent = new Intent(view.getContext(), diagnostyka.class);
+            Intent intent = new Intent(view.getContext(), diagnostics.class);
             startActivity(intent);
         });
     }
 
-    private void Animation() {
+    private void animation() {
         //move right animation
         btDiagnostyka.startAnimation(moveRight);
         imageDiagnostyka.startAnimation(moveRight);

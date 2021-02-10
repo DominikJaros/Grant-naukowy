@@ -9,37 +9,40 @@ import android.widget.ImageView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class chr_kardiologiczne extends AppCompatActivity {
+public class diagnostics extends AppCompatActivity {
 
-    View btMiazdzyca, RelativeLayout;
+    View btKardiologiczne, RelativeLayout;
     Animation fadeIn;
     ImageView ic_back;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_chr_kardiologiczne);
+        setContentView(R.layout.activity_diagnostics);
 
-        btMiazdzyca = findViewById(R.id.btMiazdzyca);
+        btKardiologiczne = findViewById(R.id.btKardiologiczne);
         RelativeLayout = findViewById(R.id.RelativeLayout);
+        fadeIn = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.fade_in);
+
 
         ic_back = findViewById(R.id.btBack);
 
         ic_back.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(view.getContext(), diagnostyka.class);
+                Intent intent = new Intent(view.getContext(), dashboard.class);
                 startActivity(intent);
             }
         });
 
-        fadeIn = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.fade_in);
         animation();
 
-        btMiazdzyca.setOnClickListener(new View.OnClickListener() {
+
+
+        btKardiologiczne.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(view.getContext(), miazdzyca.class);
+                Intent intent = new Intent(view.getContext(), cardiological_diseases.class);
                 startActivity(intent);
             }
         });
