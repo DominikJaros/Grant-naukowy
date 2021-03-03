@@ -11,7 +11,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class diagnostics extends AppCompatActivity {
 
-    View btKardiologiczne, RelativeLayout;
+    View btCardiological, RelativeLayout;
     Animation fadeIn;
     ImageView ic_back;
 
@@ -20,31 +20,24 @@ public class diagnostics extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_diagnostics);
 
-        btKardiologiczne = findViewById(R.id.btKardiologiczne);
+        btCardiological = findViewById(R.id.btKardiologiczne);
         RelativeLayout = findViewById(R.id.RelativeLayout);
         fadeIn = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.fade_in);
 
 
         ic_back = findViewById(R.id.btBack);
 
-        ic_back.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(view.getContext(), dashboard.class);
-                startActivity(intent);
-            }
+        ic_back.setOnClickListener(view -> {
+            Intent intent = new Intent(view.getContext(), dashboard.class);
+            startActivity(intent);
         });
 
         animation();
 
 
-
-        btKardiologiczne.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(view.getContext(), cardiological_diseases.class);
-                startActivity(intent);
-            }
+        btCardiological.setOnClickListener(view -> {
+            Intent intent = new Intent(view.getContext(), cardiological_diseases.class);
+            startActivity(intent);
         });
     }
 

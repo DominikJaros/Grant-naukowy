@@ -1,11 +1,11 @@
 package com.example.iczmp;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class calculators extends AppCompatActivity {
 
@@ -26,6 +26,7 @@ public class calculators extends AppCompatActivity {
             startActivity(intent);
         });
     }
+
     private void onClick(View view) {
         Intent intent;
         intent = new Intent(view.getContext(), calculatorBMI.class);

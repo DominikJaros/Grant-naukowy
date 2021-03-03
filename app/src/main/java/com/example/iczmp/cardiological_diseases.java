@@ -25,23 +25,17 @@ public class cardiological_diseases extends AppCompatActivity {
 
         ic_back = findViewById(R.id.btBack);
 
-        ic_back.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(view.getContext(), diagnostics.class);
-                startActivity(intent);
-            }
+        ic_back.setOnClickListener(view -> {
+            Intent intent = new Intent(view.getContext(), diagnostics.class);
+            startActivity(intent);
         });
 
         fadeIn = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.fade_in);
         animation();
 
-        btMiazdzyca.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(view.getContext(), atherosclerosis.class);
-                startActivity(intent);
-            }
+        btMiazdzyca.setOnClickListener(view -> {
+            Intent intent = new Intent(view.getContext(), atherosclerosis.class);
+            startActivity(intent);
         });
     }
 

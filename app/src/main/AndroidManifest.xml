@@ -9,6 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.ICZMP">
+        <activity android:name=".News"></activity>
+        <activity android:name=".liveSearch" />
         <activity android:name=".calculatorBMI" />
         <activity android:name=".calculators" />
         <activity android:name=".atherosclerosis_diagnosis" />

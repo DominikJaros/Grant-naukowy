@@ -11,7 +11,7 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class dashboard extends AppCompatActivity {
-    View btDiagnostyka, btChoroby, btCalulator, btNews;
+    View btDiagnostyka, btDiseases, btCalulator, btNews;
     Animation fadeIn, moveRight, slideDown, moveLeft;
     ImageView imageDiagnostyka, imageChoroby, imageCalculator, imageNews;
     TextView textDiagnostyka, textChoroby, textCalculator, textNews;
@@ -21,7 +21,7 @@ public class dashboard extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dashboard);
 
-        btChoroby = findViewById(R.id.btChoroby);
+        btDiseases = findViewById(R.id.btChoroby);
         btDiagnostyka = findViewById(R.id.btDiagnostyka);
         btCalulator = findViewById(R.id.btCalculator);
         btNews = findViewById(R.id.btNews);
@@ -54,6 +54,10 @@ public class dashboard extends AppCompatActivity {
             Intent intent = new Intent(view.getContext(), diagnostics.class);
             startActivity(intent);
         });
+        btDiseases.setOnClickListener(view -> {
+            Intent intent = new Intent(view.getContext(), liveSearch.class);
+            startActivity(intent);
+        });
     }
 
     private void animation() {
@@ -66,7 +70,7 @@ public class dashboard extends AppCompatActivity {
         imageNews.startAnimation(moveRight);
         textNews.startAnimation(moveRight);
         //move down animation
-        btChoroby.startAnimation(slideDown);
+        btDiseases.startAnimation(slideDown);
         imageChoroby.startAnimation(slideDown);
         textChoroby.startAnimation(slideDown);
         //move right

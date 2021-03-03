@@ -1,16 +1,10 @@
 package com.example.iczmp;
 
-import androidx.appcompat.app.ActionBar;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
-import android.graphics.Color;
-import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
-import android.view.View;
-import android.view.animation.Animation;
-import android.view.animation.AnimationUtils;
 import android.widget.Button;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -30,11 +24,9 @@ public class MainActivity extends AppCompatActivity {
 
     private void buttonClick() {
         btStart = findViewById(R.id.btStart);
-        btStart.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(view.getContext(), dashboard.class);
-                view.getContext().startActivity(intent);}
+        btStart.setOnClickListener(view -> {
+            Intent intent = new Intent(view.getContext(), dashboard.class);
+            view.getContext().startActivity(intent);
         });
     }
 }

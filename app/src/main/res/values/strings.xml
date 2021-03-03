@@ -29,4 +29,5 @@
     <string name="normalBMI">BMI wskazuje, że masz prawidłową wagę dla swojego wzrostu. Utrzymując zdrową wagę, zmniejszasz ryzyko wystąpienia poważnych problemów zdrowotnych.</string>
     <string name="overweightBMI">BMI 25-29,9 wskazuje, że masz niewielką nadwagę. Ze względów zdrowotnych mogę zalecić utratę wagi. Zaleca się skonsultowanie się z lekarzem lub dietetykiem w celu uzyskania porady.</string>
     <string name="highOverweightBMI">BMI powyżej 30 wskazuje, że masz dużą nadwagę. Twoje zdrowie może być zagrożone, jeżli nie schudniesz.</string>
+    <string name="todo">todo</string>
 </resources>

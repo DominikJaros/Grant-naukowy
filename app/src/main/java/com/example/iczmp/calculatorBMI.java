@@ -58,12 +58,9 @@ public class calculatorBMI extends AppCompatActivity {
         btBack.setOnClickListener(this::onClick);
 
 
-        btBack.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(view.getContext(), calculators.class);
-                startActivity(intent);
-            }
+        btBack.setOnClickListener(view -> {
+            Intent intent = new Intent(view.getContext(), calculators.class);
+            startActivity(intent);
         });
 
     }
@@ -89,8 +86,7 @@ public class calculatorBMI extends AppCompatActivity {
         String heightStr = btHeight.getText().toString();
         String weightStr = btWeight.getText().toString();
 
-        if (heightStr != null && !"".equals(heightStr)
-                && weightStr != null && !"".equals(weightStr)) {
+        if (!"".equals(heightStr) && !"".equals(weightStr)) {
             float heightValue = Float.parseFloat(heightStr) / 100;
             float weightValue = Float.parseFloat(weightStr);
 
