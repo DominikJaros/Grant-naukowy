@@ -6,30 +6,22 @@
     android:layout_height="match_parent"
     tools:context=".dashboard"
     android:background="@color/cream"
-    android:orientation="vertical">
-
-
-    <LinearLayout
+    android:orientation="vertical"
+    >
+    <EditText
+        android:id="@+id/editSearch"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center_horizontal"
-        android:orientation="horizontal"
-        tools:ignore="UselessParent">
-
-        <SearchView
-            android:id="@+id/searchView"
-            android:layout_width="250dp"
-            android:layout_height="50dp"
-            android:layout_margin="15dp"
-            android:background="@drawable/search_custom"
-            android:iconifiedByDefault="false"
-            android:queryHint="Wyszukaj tutaj..." />
-
-    </LinearLayout>
-
-    <ListView
-        android:id="@+id/listView"
+        android:layout_margin="16dp"
+        android:hint="Wyszukaj..."
+        android:drawableStart="@drawable/ic_search"
+        />
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent"
+        />
+
+
 
 </LinearLayout>

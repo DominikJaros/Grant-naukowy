@@ -15,6 +15,7 @@ import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -70,15 +71,16 @@ public class calculatorBMI extends AppCompatActivity {
             btHeight.setError("Pole nie może być puste.");
         } else if (TextUtils.isEmpty(btWeight.getText())) {
             btWeight.setError("Pole nie może być puste.");
-        } else {
+        }else if(radioMan.isChecked()){
             calculate();
-            resultsView.setVisibility(View.VISIBLE);
-            resultsView.setAlpha(0f);
-            resultsView.setTranslationY(100f);
-            resultsView.animate().alpha(1f).translationYBy(-100).setDuration(800);
+            resultViewAnimation();
 
+        }else if (radioWomen.isChecked()){
+            calculate();
+            resultViewAnimation();
+        }else{
+            Toast.makeText(this, "Wybierz płeć.", Toast.LENGTH_SHORT).show();
         }
-
     }
 
     private void calculate() {
@@ -115,19 +117,18 @@ public class calculatorBMI extends AppCompatActivity {
             bmiLabel = getString(R.string.very_severely_underweight);
             information.setText(getResources().getString(R.string.underweightBMI));
             changeTextColor();
-            changeColorRed();
-
+            changeColorViolet();
         } else if (Float.compare(bmi, 15f) > 0 && Float.compare(bmi, 16f) <= 0) {
             bmiLabel = getString(R.string.severely_underweight);
             information.setText(getResources().getString(R.string.underweightBMI));
             changeTextColor();
-            changeColorRed();
+            changeColorViolet();
 
         } else if (Float.compare(bmi, 16f) > 0 && Float.compare(bmi, 18.5f) <= 0) {
             bmiLabel = getString(R.string.underweight);
             information.setText(getResources().getString(R.string.underweightBMI));
             changeTextColor();
-            changeColorOrange();
+            changeColorViolet();
         } else if (Float.compare(bmi, 18.5f) > 0 && Float.compare(bmi, 25f) <= 0) {
             bmiLabel = getString(R.string.normal);
             information.setText(getResources().getString(R.string.normalBMI));
@@ -188,5 +189,14 @@ public class calculatorBMI extends AppCompatActivity {
         layoutColors.setBackgroundResource(R.drawable.gradient_green);
         result.setBackgroundResource(R.drawable.gradient_green);
     }
-
+    private void changeColorViolet(){
+        layoutColors.setBackgroundResource(R.drawable.gradient_violet);
+        result.setBackgroundResource(R.drawable.gradient_violet);
+    }
+    private void resultViewAnimation(){
+        resultsView.setVisibility(View.VISIBLE);
+        resultsView.setAlpha(0f);
+        resultsView.setTranslationY(100f);
+        resultsView.animate().alpha(1f).translationYBy(-100).setDuration(800);
+    }
 }

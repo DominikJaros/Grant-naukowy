@@ -55,7 +55,7 @@
             android:layout_alignParentTop="true"
             android:layout_marginStart="20dp"
             android:layout_marginTop="20dp"
-            android:text="Wzrost:"
+            android:text="Wzrost [cm]"
             android:textStyle="bold"
             android:textSize="20sp" />
 
@@ -69,7 +69,7 @@
             android:layout_marginTop="10dp"
             android:background="@drawable/custom_edittext_number"
             android:ems="10"
-            android:hint="CM"
+            android:hint="165"
             android:inputType="number"
             android:padding="5dp"
             android:textSize="25sp" />
@@ -82,7 +82,7 @@
             android:layout_alignParentStart="true"
             android:layout_marginStart="20dp"
             android:layout_marginTop="20dp"
-            android:text="Waga:"
+            android:text="Waga [kg]"
             android:textStyle="bold"
             android:textSize="20sp" />
 
@@ -96,7 +96,7 @@
             android:layout_marginTop="10dp"
             android:background="@drawable/custom_edittext_number"
             android:ems="10"
-            android:hint="KG"
+            android:hint="60"
             android:inputType="number"
             android:padding="5dp"
             android:textSize="25sp" />
@@ -109,7 +109,7 @@
             android:layout_alignParentStart="true"
             android:layout_marginStart="20dp"
             android:layout_marginTop="20dp"
-            android:text="Płeć:"
+            android:text="Płeć"
             android:textStyle="bold"
             android:textAlignment="center"
             android:textSize="20sp" />
